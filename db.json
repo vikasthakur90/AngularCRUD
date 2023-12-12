@@ -1,22 +1,6 @@
 {
   "Emp": [
     {
-      "id": 4,
-      "name": "Swagat Mehta",
-      "mob": "1234567890",
-      "addr": "palkhanda",
-      "gender": "M",
-      "email": "Swagat@yash.com"
-    },
-    {
-      "id": 6,
-      "name": "Meet",
-      "mob": "6789067890",
-      "addr": "Pune",
-      "gender": "M",
-      "email": "meet@yash.com"
-    },
-    {
       "id": 7,
       "name": "Namrata S",
       "mob": "1233219090",
@@ -31,14 +15,6 @@
       "addr": "dadad",
       "gender": "F",
       "email": "yo@gmail.com"
-    },
-    {
-      "id": 9,
-      "name": "Vikas Thakur",
-      "mob": "7828889875",
-      "addr": "Indore",
-      "gender": "M",
-      "email": "vikasthakur.90900@gmail.com"
     }
   ],
   "comments": [
