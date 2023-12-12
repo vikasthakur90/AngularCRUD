@@ -1,0 +1,58 @@
+
+
+<div class="form">
+    <mat-card ><mat-card-content>
+    <h1 style="margin-top: 20px">Registraion Form  </h1>
+<form [formGroup]="empForm" (ngSubmit)="onSubmit()">
+    <div>
+<mat-form-field appearance="fill" style="margin-right: 10px;">
+    <mat-label>FullName</mat-label>
+    <mat-icon matSuffix class="material-icon">people</mat-icon>
+    <input matInput placeholder="Enter FullName" formControlName = "name">
+   
+    <mat-error *ngIf="empForm.controls['name'].invalid && empForm.controls['name'].hasError('required')">You must enter a atleat 6 character</mat-error>
+</mat-form-field>&nbsp;
+<mat-form-field appearance="fill">
+    <mat-label>Enter your email</mat-label>
+    <mat-icon matSuffix class="material-icon">email</mat-icon>
+    <input matInput placeholder="pat@example.com" formControlName = "email" required>
+    <mat-error *ngIf="empForm.controls['email'].invalid && empForm.controls['email'].hasError('required')">You must enter a valid email</mat-error>
+  </mat-form-field>&nbsp;
+
+
+</div>
+<div>
+    <mat-form-field appearance="fill" style="margin-right: 10px;">
+        <mat-label>Address</mat-label>
+        <mat-icon matSuffix class="material-icon">location_city</mat-icon>
+        <input matInput placeholder="Enter FullName" formControlName = "addr">
+       
+        <mat-error *ngIf="empForm.controls['addr'].invalid && empForm.controls['addr'].hasError('required')">You must enter a atleat 6 character</mat-error>
+    </mat-form-field>&nbsp;
+
+<mat-form-field appearance="fill">
+    <mat-label>Mobile No</mat-label>
+    <mat-icon matSuffix class="material-icon">phone</mat-icon>
+    <input matInput formControlName = "mob" >
+    <mat-error *ngIf="empForm.controls['mob'].invalid && empForm.controls['mob'].hasError('required')">You must enter a Mobile No.</mat-error>
+</mat-form-field>&nbsp;
+</div>
+<div >
+
+ <div>
+    <mat-radio-group aria-label="Select an option" formControlName = "gender" style="margin-left: 10px;">
+        <mat-label>Gender</mat-label>
+       
+        <mat-radio-button value="M">Male</mat-radio-button>
+        <mat-icon matSuffix class="material-icon">male</mat-icon>
+        <mat-radio-button value="F">Female</mat-radio-button>
+        <mat-icon matSuffix class="material-icon">female</mat-icon>
+        <mat-error *ngIf="empForm.controls['gender'].hasError('required') && empForm.controls['gender'].touched">You must enter a value</mat-error>
+      </mat-radio-group>
+     </div>
+</div>
+  <button  mat-raised-button color="primary" style="margin-top: 20px;" >Submit</button>&nbsp;
+  <button routerLink="" mat-raised-button color="primary" style="margin-top: 20px;" >Back to List</button>&nbsp;
+  <button mat-raised-button color="primary" style="margin-top: 20px;" (click)="onReset()">Reset</button><br><br>
+</form>
+</mat-card-content></mat-card></div>
